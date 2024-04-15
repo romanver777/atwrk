@@ -1,5 +1,6 @@
 .catalog {
   margin: 40px auto 0;
+  padding-bottom: 40px;
   max-width: var(--max-width);
   display: flex;
   flex-direction: column;
