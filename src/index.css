@@ -1,0 +1,46 @@
+:root {
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --max-width: 1160px;
+
+  --color-accent: #22a0bc;
+  --color-black: #161616;
+  --color-dark-gray: #595959;
+  --color-gray: #9c9c9c;
+  --color-light-gray: #dadada;
+  --color-white-shadow: #f4f4f4;
+  --color-white-dark: #fdfdfd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
