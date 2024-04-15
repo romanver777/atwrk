@@ -2,12 +2,13 @@ import style from "./drop-down.module.css";
 import { useEffect, useRef } from "react";
 
 type Props = {
+  isArchived: boolean;
   onClose: () => void;
   actions: string[];
   onAction: (name: string) => void;
 };
 
-const DropDown = ({ onClose, actions, onAction }: Props) => {
+const DropDown = ({ isArchived, onClose, actions, onAction }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -26,7 +27,14 @@ const DropDown = ({ onClose, actions, onAction }: Props) => {
   };
 
   return (
-    <div className={style["drop-down"]} ref={ref}>
+    <div
+      className={
+        isArchived
+          ? `${style["drop-down"]} ${style["drop-down_arch"]}`
+          : style["drop-down"]
+      }
+      ref={ref}
+    >
       <ul className={style["drop-down__ul"]}>
         {actions.map((item, ind) => (
           <li key={ind} className={style["drop-down__li"]}>

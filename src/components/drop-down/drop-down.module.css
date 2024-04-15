@@ -17,6 +17,17 @@
 @media (max-width: 767px) {
   .drop-down {
     top: 0;
+    right: 10%;
+  }
+  .drop-down_arch {
+    top: 90px;
+    right: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .drop-down,
+  .drop-down_arch {
     right: 50%;
     transform: translateX(50%);
   }
