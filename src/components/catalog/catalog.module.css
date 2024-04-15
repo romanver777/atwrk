@@ -1,0 +1,21 @@
+.catalog {
+  margin: 40px auto 0;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  .catalog {
+    padding: 0 16px 40px;
+    max-width: calc(var(--max-width) + 32px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .catalog {
+    margin: 32px auto 0;
+    padding-bottom: 32px;
+  }
+}
