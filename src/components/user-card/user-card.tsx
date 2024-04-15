@@ -96,6 +96,7 @@ const UserCard = ({
       </div>
       {isOpen && (
         <DropDown
+          isArchived={isArchived}
           onClose={() => onOpenModal(id)}
           actions={actions}
           onAction={handleAction}
