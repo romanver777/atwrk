@@ -18,7 +18,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .header__container  {
+  .header__container {
     padding: 11px 16px;
   }
 }
@@ -50,6 +50,30 @@
 .header__logo-link,
 .header__serv-link {
   display: flex;
+}
+
+.header__serv-link path {
+  transition: 0.3s;
+}
+
+.header__serv-link:hover .header__serv-icon-fav path {
+  stroke: var(--color-accent);
+  transition: 0.3s;
+}
+
+.header__serv-link:hover .header__serv-icon-notif path {
+  fill: var(--color-accent);
+  transition: 0.3s;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .header__serv-link:hover .header__serv-icon-fav path {
+    stroke: var(--color-dark-gray);
+  }
+
+  .header__serv-link:hover .header__serv-icon-notif path {
+    fill: var(--color-dark-gray);
+  }
 }
 
 .header__user {
