@@ -1,4 +1,5 @@
 export type User = {
+  [key: string]: string | number | { [key: string]: string | { [key: string]: string } };
   id: number;
   name: string;
   username: string;

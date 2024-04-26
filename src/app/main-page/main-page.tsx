@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import {
   loadUsers,
@@ -12,7 +13,10 @@ import Catalog from "@/components/catalog/catalog";
 import UserList from "@/components/user-list/user-list";
 
 const MainPage = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
+
   const active = useAppSelector((state) => state.users.active);
   const archived = useAppSelector((state) => state.users.archived);
   const loading = useAppSelector((state) => state.users.loading);
@@ -23,6 +27,9 @@ const MainPage = () => {
 
   const handleAction = (name: string, id: number) => {
     switch (name) {
+      case "Редактировать":
+        navigate(`/users/${id}`, { state: { from: location.pathname } });
+        break;
       case "Архивировать":
         dispatch(setArchived(id));
         break;

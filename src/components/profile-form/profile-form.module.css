@@ -1,0 +1,34 @@
+.profile-form {
+  max-width: 420px;
+}
+
+.profile-form__btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-white-dark);
+  background-color: var(--color-black);
+  width: 170px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 767px) {
+  .profile-form__btn {
+    font-size: 14px;
+    width: 100%;
+    height: 44px;
+  }
+}
+
+.profile-form__btn:hover {
+  background-color: var(--color-white-shadow);
+  color: var(--color-dark-gray);
+  border: none;
+  transition: 0.3s;
+}
